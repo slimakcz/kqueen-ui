@@ -178,6 +178,7 @@ div.login-footer {
   @include prefix(box-shadow, 0px 1px 4px -1px rgba(187,187,187,1), webkit moz);
   .tab-pane h3 {
     margin-top: 10px;
+    margin-bottom: 10px;
   }
   h3 {
     margin: 0;
@@ -479,7 +480,7 @@ table {
   .table {
     @include table-col-x;
     .status_column {
-      width: 160px;
+      //width: 80px;
       div {
         margin-bottom: 2px;
         .label {
@@ -523,7 +524,7 @@ table {
       }
     }
     .action_column {
-      width: 120px;
+      //width: 120px;
       @extend .text-right;
       a {
         color: $brand-primary;

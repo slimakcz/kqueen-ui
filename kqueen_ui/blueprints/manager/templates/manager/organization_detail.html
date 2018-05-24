@@ -19,22 +19,22 @@
   </div>
   <table class="table table-hover">
     <thead>
-      <th class="table-col-3">Name</th>
-      <th class="table-col-3">E-mail</th>
-      <th class="table-col-3">Role</th>
-      <th class="table-col-3">Created</th>
-      <th class="status_column">Status</th>
-      <th class="action_column">Actions</th>
+      <th class="col-md-3">Name</th>
+      <th class="col-md-3">E-mail</th>
+      <th class="col-md-1">Role</th>
+      <th class="col-md-3">Created</th>
+      <th class="col-md-1 status_column">Status</th>
+      <th class="col-md-1 action_column">Actions</th>
     </thead>
     <tbody>
       {% for member in members %}
         <tr>
-          <td class="table-col-3">{{ member.username }}</td>
-          <td class="table-col-3">{{ member.email }}</td>
-          <td class="table-col-3">{{ member.role }}</td>
-          <td class="table-col-3">{{ member.created_at }}</td>
-          <td class="status_column"><i class="mdi {{ member.state|user_status_icon_class }}" title="{{ member.state }}"></i></td>
-          <td class="action_column">
+          <td class="col-md-3">{{ member.username }}</td>
+          <td class="col-md-3">{{ member.email }}</td>
+          <td class="col-md-1">{{ member.role }}</td>
+          <td class="col-md-3">{{ member.created_at }}</td>
+          <td class="col-md-1 status_column"><i class="mdi {{ member.state|user_status_icon_class }}" title="{{ member.state }}"></i></td>
+          <td class="col-md-1 action_column">
             {% set reinvite_url = url_for('ui.user_reinvite', user_id=member.id) %}
             {% set change_role_url = url_for('manager.member_change_role', organization_id=organization.id, user_id=member.id) %}
             {% set delete_url = url_for('ui.user_delete', user_id=member.id) %}
