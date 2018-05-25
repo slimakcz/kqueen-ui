@@ -557,6 +557,11 @@ table {
         color: $mira-gray-dark;
       }
     }
+    &.clusters-list, &.provisioners-list {
+      .action_column, .status_column {
+        width: 70px;
+      }
+    }
   }
   &.no-actions {
     margin-top: 20px;
@@ -577,12 +582,6 @@ table {
     li {
       margin-bottom: 3px;
     }
-  }
-}
-
-.table-container .table.clusters-list, .table-container .table.provisioners-list {
-  .action_column, .status_column {
-    width: 70px;
   }
 }
 
